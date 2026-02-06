@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lab – Experiment 1</title>
+</head>
+<body>
+
+<h1>Containerization-DevOps</h1>
+<hr>
+
+<p><b>Name:</b> Rishiraj Singh</p>
+<p><b>SAP ID:</b>500123612</p>
+<p><b>Batch:</b> B3 (CCVT)</p>
+
+<h2>Lab – Experiment 1</h2>
+
+<h3>Objective</h3>
+<ul>
+<li>To understand the conceptual and practical differences between Virtual Machines and Containers.</li>
+<li>To install and configure a Virtual Machine using VirtualBox and Vagrant on Windows.</li>
+<li>To install and configure Containers using Docker inside WSL.</li>
+<li>To deploy an Ubuntu-based Nginx web server in both environments.</li>
+<li>To compare resource utilization, performance, and operational characteristics.</li>
+</ul>
+
+<h3>Software and Hardware Requirements</h3>
+
+<h4>Hardware</h4>
+<ul>
+<li>64-bit system with virtualization enabled</li>
+<li>Minimum 8 GB RAM (4 GB acceptable)</li>
+<li>Internet connection</li>
+</ul>
+
+<h4>Software (Windows)</h4>
+<ul>
+<li>Oracle VirtualBox</li>
+<li>Vagrant</li>
+<li>WSL 2</li>
+<li>Ubuntu (WSL)</li>
+<li>Docker Engine</li>
+</ul>
+
+<h3>Theory</h3>
+
+<h4>Virtual Machine</h4>
+<p>
+A Virtual Machine emulates a complete physical system with its own OS and runs on a hypervisor.
+</p>
+<ul>
+<li>Full OS</li>
+<li>High resource usage</li>
+<li>Strong isolation</li>
+<li>Slow startup</li>
+</ul>
+
+<h4>Container</h4>
+<p>
+Containers virtualize at OS level and share the host kernel.
+</p>
+<ul>
+<li>Lightweight</li>
+<li>Fast startup</li>
+<li>Efficient resource usage</li>
+</ul>
+
+<h3>Experiment Setup – Part A: Virtual Machine</h3>
+
+<pre>
+vagrant init ubuntu/jammy64
+vagrant up
+vagrant ssh
+sudo apt install -y nginx
+curl localhost
+</pre>
+
+<h3>Experiment Setup – Part B: Containers</h3>
+
+<pre>
+sudo apt install docker.io
+docker run -d -p 8080:80 nginx
+curl localhost:8080
+</pre>
+
+<h3>Result</h3>
+<p>
+Containers are more lightweight and efficient, while VMs provide stronger isolation.
+</p>
+
+<h3>Conclusion</h3>
+<p>
+VMs suit full OS isolation; containers suit fast deployment and microservices.
+</p>
+
+<h3>References</h3>
+<ul>
+<li>VirtualBox Documentation</li>
+<li>Vagrant Documentation</li>
+<li>Docker Documentation</li>
+</ul>
+
+</body>
+</html>
