@@ -98,11 +98,27 @@ curl localhost
 <h3>Experiment Setup – Part B: Containers</h3>
 
 <pre>
+wsl --install
+wsl --install -d Ubuntu
 sudo apt install docker.io
 docker run -d -p 8080:80 nginx
 curl localhost:8080
+docker pull ubuntu
+    docker run -d -p 8080:80 --name nginx-container nginx
+    curl localhost:8080
 </pre>
 
+<h3>Resource Utilization Observation</h3>
+<pre>
+free -h
+htop
+systemd-analyze
+<h3>Container Observation Commands</h3>
+<pre>
+docker stats
+free -h
+    
+</pre>
 <h3>Result</h3>
 <p>
 Containers are more lightweight and resource-efficient compared to virtual machines, while virtual machines provide stronger isolation.
