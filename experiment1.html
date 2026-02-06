@@ -104,9 +104,10 @@ sudo apt install docker.io
 docker run -d -p 8080:80 nginx
 curl localhost:8080
 docker pull ubuntu
-    docker run -d -p 8080:80 --name nginx-container nginx
-    curl localhost:8080
+docker run -d -p 8080:80 --name nginx-container nginx
+curl localhost:8080
 </pre>
+
 
 <h3>Resource Utilization Observation</h3>
 <pre>
@@ -123,7 +124,6 @@ free -h
 <p>
 Containers are more lightweight and resource-efficient compared to virtual machines, while virtual machines provide stronger isolation.
 </p>
-
 <h3>Conclusion</h3>
 <p>
 Virtual Machines are suitable for full OS isolation, whereas containers are ideal for fast deployment and microservices.
