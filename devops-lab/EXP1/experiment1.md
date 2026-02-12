@@ -82,13 +82,13 @@ Start the VM:
 ```bash
 vagrant up
 ```
-![Vagrant Up](images/vaginit-up.png)
+![Vagrant Up](images/s3.png)
 
 Access the VM:
 ```bash
 vagrant ssh
 ```
-![Vagrant SSH](images/vagssh.png)
+![Vagrant SSH](images/s4.png)
 
 **Step 4: Install Nginx inside VM**
 ```bash
@@ -96,23 +96,23 @@ sudo apt update
 sudo apt install -y nginx
 sudo systemctl start nginx
 ```
-![Start Nginx in VM](images/vagstartnginx.png)
+![Start Nginx in VM](images/s5.png)
 
 **Step 5: Verify Nginx**
 ```bash
 curl localhost
 ```
-![Curl Localhost](images/curllocal.png)
+![Curl Localhost](images/s6.png)
 
 **Stop and remove VM**
 ```bash
 vagrant halt
 ```
-![Vagrant Halt](images/vaghalt.png)
+![Vagrant Halt](images/s7.png)
 ```bash
 vagrant destroy
 ```
-![Vagrant Destroy](images/vagdestory.png)
+![Vagrant Destroy](images/s8.png)
 
 ---
 ## Experiment Setup – Part B: Containers using WSL (Windows)
@@ -125,13 +125,13 @@ vagrant destroy
 ```bash
 wsl --install
 ```
-![Install WSL](images/wsl-ubuntu.png)
+![Install WSL](images/s9.png)
 
 **Step 2: Install Ubuntu on WSL**
 ```bash
 wsl --install -d Ubuntu
 ```
-![Install Ubuntu on WSL](images/wsl-ubuntu.png)
+![Install Ubuntu on WSL](images/s10.png)
 
 **Step 3: Install Docker Engine inside WSL**
 > Installing Docker Engine inside WSL enables you to run and manage containers natively in a Linux environment on Windows.
@@ -142,25 +142,25 @@ sudo systemctl start docker
 sudo usermod -aG docker $USER
 # Logout and login again to apply group changes
 ```
-![Step 3 WSL](images/step3wsl.png)
+![Step 3 WSL](image/s11.png)
 
 **Step 4: Run Ubuntu Container with Nginx**
 > Pulling and running containers demonstrates how to deploy applications quickly and efficiently using Docker. The Nginx container is a common example for web server deployment.
 ```bash
 docker pull ubuntu
 ```
-![Docker Pull](images/dockerpull.png)
+![Docker Pull](images/s12.png)
 ```bash
 docker run -d -p 8080:80 --name nginx-container nginx
 ```
-![Run Nginx Container](images/dockrunnginx.png)
+![Run Nginx Container](images/s13.png)
 
 **Step 5: Verify Nginx in Container**
 > Verifying the running container ensures that the application is accessible and functioning as expected.
 ```bash
 curl localhost:8080
 ```
-![Curl Localhost 8080](images/curllocal.png)
+![Curl Localhost 8080](images/s14.png)
 
 ---
 ## Resource Utilization Observation
@@ -172,17 +172,17 @@ free -h
 htop
 systemd-analyze
 ```
-![VM Observation](images/vmobservation.png)
+![VM Observation](images/m1.png)
 
 ### Container Observation Commands
 ```bash
 docker stats
 ```
-![Docker Stats](images/dockstats.png)
+![Docker Stats](images/m2.png)
 ```bash
 free -h
 ```
-![Docker Free](images/dockfree.png)
+![Docker Free](images/m3.png)
 
 | Parameter      | Virtual Machine | Container |
 |---------------|----------------|-----------|
