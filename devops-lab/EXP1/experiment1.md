@@ -67,7 +67,7 @@ Containers virtualize at the operating system level. They share the host OS kern
 	```bash
 	vagrant --version
 	```
-	![Vagrant Version](images/vagversion.png)
+   ![Vagrant Version](images/vagrant-version.png)
 
 **Step 3: Create Ubuntu VM using Vagrant**
 Create a new directory and initialize Vagrant:
@@ -76,7 +76,7 @@ mkdir vm-lab
 cd vm-lab
 vagrant init ubuntu/jammy64
 ```
-![Vagrant Init](images/vaginit-up.png)
+![VM Setup](images/s2.png)
 
 Start the VM:
 ```bash
