@@ -25,25 +25,26 @@ After completing this lab, students will be able to:
 ```bash
 docker pull nginx:latest
 ```
-![Docker Pull](part1/images/q1.png)
+![Docker Pull](images/q1.png)
 
 ### Step 2: Run the Container
 ```bash
 docker run -d --name nginx-official -p 8080:80 nginx
 ```
-![Docker Run](part1/images/q2.png)
+![Docker Run](images/q2.png)
 
 ### Step 3: Verify
 ```bash
 curl http://localhost:8080
 ```
-![Curl Output](part1/images/q3.png)
+![Docker Images](images/q3.png)
 
 ### Key Observations
 ```bash
 docker images nginx
 ```
-![Docker Images](part1/images/q4.png)
+![Docker Images](images/q4.png)
+
 - Image is pre-optimized
 - Minimal configuration required
 - Uses Debian-based OS internally
@@ -60,25 +61,25 @@ RUN apt-get update && \
 EXPOSE 80
 CMD ["nginx", "-g", "daemon off;"]
 ```
-![Create Dockerfile](part2-custom/images/w1.png)
+![Create Dockerfile](images/w1.png)
 
 ### Step 2: Build Image
 ```bash
 docker build -t nginx-ubuntu .
 ```
-![Build 1](part2-custom/images/w2.png)
+![Build 1](images/w2.png)
 
 ### Step 3: Run Container
 ```bash
 docker run -d --name nginx-ubuntu -p 8081:80 nginx-ubuntu
 ```
-![Run Container](part2-custom/images/w3.png)
+![Run Container](images/w3.png)
 
 ### Observations
 ```bash
 docker images nginx-ubuntu
 ```
-![Docker Images](part2-custom/images/w4.png)
+![Docker Images](images/w4.png)
 - Much larger image size
 - More layers
 - Full OS utilities available
@@ -98,19 +99,19 @@ CMD ["nginx", "-g", "daemon off;"]
 ```bash
 docker build -t nginx-alpine .
 ```
-![Build](part3-custom-alpine/images/e2.png)
+![Build](images/e2.png)
 
 ### Step 3: Run Container
 ```bash
 docker run -d --name nginx-alpine -p 8082:80 nginx-alpine
 ```
-![Run Container](part3-custom-alpine/images/e3.png)
+![Run Container](images/e3.png)
 
 ### Observations
 ```bash
 docker images nginx-alpine
 ```
-![Docker Images](part3-custom-alpine/images/e4.png)
+![Docker Images](images/e4.png)
 - Extremely small image
 - Fewer packages
 - Faster pull and startup time
@@ -132,15 +133,15 @@ Typical result (approx):
 ```bash
 docker history nginx
 ```
-![nginx History](part4/images/e5.png)
+![nginx History(images/e5.png)
 ```bash
 docker history nginx-ubuntu
 ```
-![nginx-ubuntu History](part4/images/e6.png)
+![nginx-ubuntu History](images/e6.png)
 ```bash
 docker history nginx-alpine
 ```
-![nginx-alpine History](part4/images/e7.png)
+![nginx-alpine History](images/e7.png)
 
 - Ubuntu has many filesystem layers
 - Alpine has minimal layers
@@ -153,8 +154,8 @@ docker history nginx-alpine
 mkdir html
 echo "<h1>Hello from Docker NGINX</h1>" > html/index.html
 ```
-![Make Directory](part5/images/e8.png)
-![Make Directory](part5/images/e9.png)
+![Make Directory](images/e8.png)
+![Make Directory](images/e9.png)
 
 Run:
 ```bash
@@ -163,7 +164,7 @@ docker run -d \
   -v $(pwd)/html:/usr/share/nginx/html \
   nginx
 ```
-![Run Container](part5/images/e10.png)
+![Run Container](images/e10.png)
 
 ---
 ## Part 6: Comparison Summary
@@ -200,7 +201,7 @@ Customizing the NGINX config allows you to adapt the web server for different us
   - Change default port
   - Add basic auth
   - Remove unused layers and rebuild image
-  - ![Create config](Lab-Assignment/images/e11.png)
+  - ![Create config](images/e11.png)
 
 - Explain:
   - Why Alpine images are smaller
