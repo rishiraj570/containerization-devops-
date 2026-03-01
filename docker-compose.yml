@@ -1,0 +1,58 @@
+services:
+
+  database:
+    build: ./database
+    container_name: postgres_container
+    restart: always
+
+    environment:
+      POSTGRES_DB: mydb
+      POSTGRES_USER: myuser
+      POSTGRES_PASSWORD: mypass
+
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+    networks:
+      default:
+      my_macvlan:
+        ipv4_address: 192.168.1.200
+
+    healthcheck:
+      test: ["CMD","pg_isready","-U","myuser"]
+      interval: 5s
+      retries: 5
+
+
+  backend:
+    build: ./backend
+    container_name: backend_container
+    restart: always
+
+    ports:
+      - "3000:3000"
+
+    depends_on:
+      database:
+        condition: service_healthy
+
+    environment:
+      DB_HOST: database
+      DB_USER: myuser
+      DB_PASSWORD: mypass
+      DB_NAME: mydb
+
+    networks:
+      default:
+      my_macvlan:
+        ipv4_address: 192.168.1.201
+
+
+networks:
+  default:
+  my_macvlan:
+    external: true
+
+
+volumes:
+  pgdata:

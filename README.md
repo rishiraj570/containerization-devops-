@@ -1,12 +1,21 @@
-# Containerization-DevOps
+# Docker Containerization Assignment
 
-**Name:** Rishiraj Singh
-**SAP ID:** 500123612
-**Batch:** B3 (CCVT)
+## Overview
+This project containerizes a Node.js backend and PostgreSQL database using Docker and docker-compose with macvlan networking and persistent volumes.
 
-## Experiments
+## Features
+- PostgreSQL container with named volume
+- Node.js backend container
+- macvlan network with static IP
+- Health endpoint
+- POST and GET APIs
+- Multi-stage Docker build
+- Non-root container user
 
-- [Experiment 1: Virtual Machines vs Containers](devops-lab/EXP1/experiment1.md)
-- [Experiment 2: Docker Installation, Configuration, and Running Images](devops-lab/EXP2/experiment2.md)
-- [Experiment 3: Deploying NGINX Using Different Base Images and Comparing Image Layers](devops-lab/EXP3/EXP3.md)
-- [Experiment 4: Docker Essentials](devops-lab/EXP4/experiment4.md)
+## How to run
+docker compose up --build -d
+
+## API
+GET /health
+POST /users
+GET /users
