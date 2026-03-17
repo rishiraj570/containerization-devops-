@@ -30,9 +30,14 @@
         ul {
             line-height: 1.8;
         }
+        pre {
+            background: #eee;
+            padding: 10px;
+            border-radius: 6px;
+        }
         .btn {
             display: inline-block;
-            margin: 10px 10px 10px 0;
+            margin-top: 10px;
             padding: 10px 15px;
             background: #0b7285;
             color: white;
@@ -72,17 +77,60 @@
 <li>Networking: Ipvlan</li>
 </ul>
 
-<h2>🔗 Links</h2>
-
-<!-- GitHub Repo Button -->
+<h2>🔗 GitHub Repository</h2>
 <a class="btn" href="https://github.com/rishiraj570/containerization-devops-/tree/main/docker-assignment-1" target="_blank">
 View Assignment Files
 </a>
 
-<!-- IO Page Button -->
-<a class="btn" href="docker-assignment-1/io.html">
-View Input/Output
-</a>
+<h2>📥 Input</h2>
+<ul>
+<li><b>POST Request:</b></li>
+<pre>
+POST /api/records
+{
+  "data": "Sample Value"
+}
+</pre>
+
+<li><b>Docker Commands:</b></li>
+<pre>
+docker-compose up -d
+docker-compose down
+</pre>
+
+<li><b>Environment Variables:</b></li>
+<ul>
+<li>DB Name</li>
+<li>Username</li>
+<li>Password</li>
+</ul>
+</ul>
+
+<h2>📤 Output</h2>
+
+<p><b>API Response:</b></p>
+<pre>
+{
+  "message": "Record inserted successfully"
+}
+</pre>
+
+<p><b>Fetch Records:</b></p>
+<pre>
+[
+  { "id": 1, "data": "Sample Value" }
+]
+</pre>
+
+<p><b>Health Check:</b></p>
+<pre>
+OK
+</pre>
+
+<p><b>Persistence:</b></p>
+<pre>
+Data remains after docker-compose down & up
+</pre>
 
 <h2>📸 Screenshots</h2>
 <p>All output screenshots are available inside the <b>screenshots</b> folder in the repository.</p>
