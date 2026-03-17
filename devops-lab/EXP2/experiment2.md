@@ -2,7 +2,7 @@
 **SAP ID:** 500123612 
 **Batch:** B3 (CCVT)
 
-# Lab – Experiment 4
+# Lab – Experiment 2
 
 ## Objective
 - Pull Docker images
