@@ -44,8 +44,8 @@ docker run -d -v /app/data --name web1 nginx
 docker volume ls
 ```
  
-![Anonymous volume create](images/anony0.png)
-![Volume list showing anonymous volume](images/dockvls.png)
+![Anonymous volume create](images/a3.png)
+![Volume list showing anonymous volume](images/a4.png)
 
 This shows an anonymous volume entry (random hash name) in `docker volume ls`.
 
@@ -58,9 +58,9 @@ docker volume ls
 docker volume inspect mydata
 ```
  
-![Create named volume mydata](images/namedvolumes.png)
-![Run nginx with named volume mydata](images/dockrun.png)
-![List volumes including mydata](images/dockvls.png)
+![Create named volume mydata](images/a5.png)
+![Run nginx with named volume mydata](images/a6.png)
+![List volumes including mydata](images/a7.png)
 
 Explanation: Named volumes are managed by Docker and can be safely attached to multiple containers. Data written to `/app/data` inside the container is stored in `mydata` on the Docker host.
 
@@ -72,8 +72,8 @@ docker run -d -v ~/myapp-data:/app/data --name web3 nginx
 echo "From Host" > ~/myapp-data/host-file.txt
 docker exec web3 cat /app/data/host-file.txt
 ```
-![Run nginx with host bind-mount](images/bindmount.png)
-![File created on host visible inside container](images/datab1.png)
+![Run nginx with host bind-mount](images/a8.png)
+![File created on host visible inside container](images/a9.png)
 
 Explanation: Bind mounts map a host path into the container. Files created on the host are immediately visible in the container and vice-versa.
 
@@ -96,8 +96,8 @@ docker run -d \
   mysql:8.0
 ```
  
-![Run MySQL with named volume mysql-data](images/webapp1.png)
-![Stop/remove and re-run to demonstrate persistence](images/datab1.png)
+![Run MySQL with named volume mysql-data](images/a10.png)
+![Stop/remove and re-run to demonstrate persistence](images/a11.png)
 
 Explanation: The `mysql-data` named volume keeps database files on the host so recreating containers with the same volume preserves the DB.
 
@@ -118,7 +118,7 @@ docker run -d \
 
 curl http://localhost:8080
 ```
-![Run nginx with mounted config file](images/dockrunport.png)
+![Run nginx with mounted config file](images/a12.png)
 
 Explanation: Mounting a single config file allows you to quickly test and iterate on server configuration from the host.
 
@@ -132,8 +132,8 @@ docker volume create app-volume
 docker volume inspect app-volume
 ```
  
-![Create generic app-volume](images/anony1.png)
-![Inspect app-volume details](images/namedvolumes.png)
+![Create generic app-volume](images/a13.png)
+![Inspect app-volume details](images/a14.png)
 
 - Remove unused volumes:
 
@@ -163,7 +163,7 @@ docker run -d \
   my-node-app
 ```
  
-![Run container with single env var example](images/dock-e.png)
+![Run container with single env var example](images/a15.png)
 
 2. Using multiple `-e` variables:
 
@@ -175,7 +175,7 @@ docker run -d \
   my-app
 ```
  
-![Run container with multiple -e variables](images/dockenv0.png)
+![Run container with multiple -e variables](images/a16.png)
 
 3. Use an `.env` file to store variables and pass them with `--env-file`:
 
@@ -190,8 +190,8 @@ docker run -d \
   my-app
 ```
  
-![Create .env file](images/dockenv1.png)
-![Run container with --env-file](images/dockenv1.png)
+![Create .env file](images/a17.png)
+![Run container with --env-file](images/a18.png)
 
 Explanation: `.env` files simplify environment configuration and avoid leaking secrets in shell history. `ENV` in Dockerfile sets defaults that can be overridden at runtime.
 
@@ -211,7 +211,7 @@ EXPOSE 5000
 CMD ["python", "app.py"]
 ```
  
-![Example Dockerfile for Flask app](images/dockfile.png)
+![Example Dockerfile for Flask app](images/a19.png)
 
 ---
 ## Part 5 — Inspecting containers, logs and resource usage
@@ -223,7 +223,7 @@ docker exec flask-app env
 docker exec flask-app printenv DATABASE_HOST
 ```
  
-![Exec printenv output](images/dockexecweb1.png)
+![Exec printenv output](images/a20.png)
 
 - View processes inside container:
 
@@ -231,7 +231,7 @@ docker exec flask-app printenv DATABASE_HOST
 docker top container-name
 ```
  
-![docker top output](images/docktop.png)
+![docker top output](images/a21.png)
 
 - View logs:
 
@@ -241,7 +241,7 @@ docker logs -f container-name            # follow logs
 docker logs --tail 100 -t container-name # last 100 lines with timestamps
 ```
  
-![docker logs example](images/docklogs.png)
+![docker logs example](images/a22.png)
 
 - Live resource usage:
 
@@ -251,7 +251,7 @@ docker stats --no-stream    # single snapshot
 docker stats --format "table {{.Name}}\t{{.CPUPerc}}\t{{.MemUsage}}\t{{.NetIO}}"
 ```
  
-![docker stats snapshot](images/dockstats.png)
+![docker stats snapshot](images/a23.png)
 
 Explanation: `docker stats` is useful for quick performance checks; logs and `docker top` help diagnose problems.
 
@@ -270,10 +270,10 @@ docker run -d --name web2 --network my-network nginx
 docker exec web1 curl http://web2
 ```
  
-![List networks](images/dockcreatenetw.png)
-![Create network my-network](images/dockcreatenetw.png)
-![Inspect network my-network](images/dockinspectnetw.png)
-![Curl between containers on same network](images/dockexecweb1.png)
+![List networks](images/a24.png)
+![Create network my-network](images/a25.png)
+![Inspect network my-network](images/a26.png)
+![Curl between containers on same network](images/a27.png)
 
 Explanation: Containers on the same user-defined bridge can resolve each other by container name. Use `host` or `none` networks for special cases.
 
@@ -286,7 +286,7 @@ The repository includes `monitor.sh` which provides a quick overview of running 
 ```bash
 bash monitor.sh
 ```
-![create script](images/nanoscript.png)
-![run script](images/runscript.png)
+![create script](images/a28.png)
+![run script](images/a29.png)
 
 ---
