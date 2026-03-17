@@ -32,8 +32,8 @@ cat /data/message.txt  # Shows "Hello World"
 exit
 ```
  
-![Start interactive container](images/echcatexit.png)
-![Write and read file inside container](images/echcatexit.png)
+![Start interactive container](images/a1.png)
+![Write and read file inside container](images/a2.png)
 
 If you restart the container without a volume, you'll find the data missing because the directory `/data` was not persisted to a volume.
 
