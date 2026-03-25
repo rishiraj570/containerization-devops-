@@ -1,1 +1,3 @@
-
+Apache page shows "It works!"
+Deployment created
+Pod recreated automatically
