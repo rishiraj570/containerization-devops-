@@ -1,1 +1,6 @@
-
+Pod: smallest unit, no self-healing
+Deployment: manages pods, auto-healing
+Service: exposes app
+NodePort: external access
+Port-forward: temporary access
+ImagePullBackOff: wrong image error
