@@ -1,1 +1,12 @@
-
+kubectl run apache-pod --image=httpd
+kubectl get pods
+kubectl describe pod apache-pod
+kubectl port-forward pod/apache-pod 8081:80
+kubectl delete pod apache-pod
+kubectl create deployment apache --image=httpd
+kubectl expose deployment apache --port=80 --type=NodePort
+kubectl set image deployment/apache httpd=wrongimage
+kubectl set image deployment/apache httpd=httpd
+kubectl exec -it <pod-name> -- /bin/bash
+kubectl delete deployment apache
+kubectl delete service apache
