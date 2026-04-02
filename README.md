@@ -12,4 +12,4 @@
 - [Experiment 3: Deploying NGINX Using Different Base Images and Comparing Image Layers](devops-lab/EXP3/EXP3.md)
 - [Experiment 4: Docker Essentials](devops-lab/EXP4/experiment4.md)
 - [Experiment 5: Data Persistence, Volumes, Environment Variables, Networking, Logs & Monitoring](devops-lab/EXP5/experiment5.md)
-- [Experiment 6: Experiment 6: Docker Run vs Docker Compose: Multi-Container Application Orchestration](devops-lab/EXP6/experiment6.md)
+- [Experiment 6: Docker Run vs Docker Compose: Multi-Container Application Orchestration](devops-lab/EXP6/experiment6.md)
