@@ -179,8 +179,8 @@ docker run -d \
 docker ps
 ```
 *Expected Output:* Container named "lab-nginx" with port 8081->80/tcp
-![Docker Run Verification](images/dockrun0.png)
-![Docker PS Verification](images/dockerpsverify.png)
+![Docker Run Verification](images/a1.png)
+![Docker PS Verification](images/a2.png)
 
 **Access the web server:**
 ```
@@ -227,7 +227,7 @@ services:
 ```bash
 docker compose up -d
 ```
-![Docker Compose Up Command](images/dockcompose0run.png)
+![Docker Compose Up Command](images/a3.png)
 
 **Command Explanation:**
 - `docker compose up`: Create and start services defined in `docker-compose.yml`
@@ -237,7 +237,7 @@ docker compose up -d
 ```bash
 docker compose ps
 ```
-![Docker PS Verification](images/dockerpsverify.png)
+![Docker PS Verification](images/a4.png)
 
 **Access the web server:**
 ```
@@ -265,7 +265,7 @@ Deploy WordPress with MySQL using both Docker Run (manual) and Docker Compose (s
 ```bash
 docker network create wp-net
 ```
-![Docker Network Creation](images/docknetwork.png)
+![Docker Network Creation](images/a5.png)
 
 **Command Explanation:**
 - `docker network create`: Creates a user-defined bridge network
@@ -280,7 +280,7 @@ docker run -d \
   -e MYSQL_DATABASE=wordpress \
   mysql:5.7
 ```
-![Docker Run MySQL](images/dockrunsql.png)
+![Docker Run MySQL](images/a6.png)
 
 **Command Explanation:**
 - `--network wp-net`: Connects container to the custom network
@@ -300,7 +300,7 @@ docker run -d \
   -e WORDPRESS_DB_PASSWORD=secret \
   wordpress:latest
 ```
-![Docker Run WordPress](images/dockrunwordpress.png)
+![Docker Run WordPress](images/a7.png)
 
 **Command Explanation:**
 - `--network wp-net`: Connects to same network as MySQL
@@ -312,13 +312,13 @@ docker run -d \
 ```bash
 docker ps
 ```
-![Docker PS Verify Containers](images/dockerpsverify.png)
+![Docker PS Verify Containers](images/a8.png)
 
 **Test the application:**
 ```
 http://localhost:8082
 ```
-![WordPress Localhost Access](images/localhostwp.png)
+![WordPress Localhost Access](images/a9.png)
 
 **Clean up:**
 ```bash
@@ -374,21 +374,21 @@ volumes:
 ```bash
 docker compose up -d
 ```
-![Docker Compose Deployment](images/dockcompose0run.png)
+![Docker Compose Deployment](images/a10.png)
 
 **Verify services:**
 ```bash
 docker ps
 docker volume ls
 ```
-![Docker Compose PS Verification](images/dockerpsverify.png)
-![Docker Volumes List](images/dockervolumels.png)
+![Docker Compose PS Verification](images/a11.png)
+![Docker Volumes List](images/a12.png)
 
 **Access WordPress:**
 ```
 http://localhost:8082
 ```
-![WordPress Setup](images/localhostwp.png)
+![WordPress Setup](images/a13.png)
 
 Complete WordPress setup wizard to finalize installation.
 
@@ -443,8 +443,8 @@ docker compose ps
 docker compose logs
 docker compose down
 ```
-![Docker Compose Code](images/dockcompose0code.png)
-![Docker Compose Run](images/dockcompose0run.png)
+![Docker Compose Code](images/a14.png)
+![Docker Compose Run](images/a15.png)
 
 ---
 #### Problem 2: Volume + Network Configuration
@@ -516,8 +516,8 @@ docker compose ps
 docker network ls
 docker compose down -v
 ```
-![Docker Compose Setup](images/dockercompose1code.png)
-![Docker Compose Run Network](images/dockcompose2run.png)
+![Docker Compose Setup](images/a16.png)
+![Docker Compose Run Network](images/a17.png)
 
 ---
 ---
