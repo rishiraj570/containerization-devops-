@@ -312,13 +312,13 @@ docker run -d \
 ```bash
 docker ps
 ```
-![Docker PS Verify Containers](images/a8.png)
+![Docker PS Verify Containers](images/a9.png)
 
 **Test the application:**
 ```
 http://localhost:8082
 ```
-![WordPress Localhost Access](images/a9.png)
+![WordPress Localhost Access](images/a10.png)
 
 **Clean up:**
 ```bash
@@ -374,21 +374,21 @@ volumes:
 ```bash
 docker compose up -d
 ```
-![Docker Compose Deployment](images/a10.png)
+![Docker Compose Deployment](images/a11.png)
 
 **Verify services:**
 ```bash
 docker ps
 docker volume ls
 ```
-![Docker Compose PS Verification](images/a11.png)
-![Docker Volumes List](images/a12.png)
+![Docker Compose PS Verification](images/a12.png)
+![Docker Volumes List](images/a13.png)
 
 **Access WordPress:**
 ```
 http://localhost:8082
 ```
-![WordPress Setup](images/a13.png)
+![WordPress Setup](images/a14.png)
 
 Complete WordPress setup wizard to finalize installation.
 
@@ -443,8 +443,8 @@ docker compose ps
 docker compose logs
 docker compose down
 ```
-![Docker Compose Code](images/a14.png)
-![Docker Compose Run](images/a15.png)
+![Docker Compose Code](images/a15.png)
+![Docker Compose Run](images/a16.png)
 
 ---
 #### Problem 2: Volume + Network Configuration
@@ -516,8 +516,8 @@ docker compose ps
 docker network ls
 docker compose down -v
 ```
-![Docker Compose Setup](images/a16.png)
-![Docker Compose Run Network](images/a17.png)
+![Docker Compose Setup](images/a17.png)
+![Docker Compose Run Network](images/a18.png)
 
 ---
 ---
