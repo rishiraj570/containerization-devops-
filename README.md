@@ -13,3 +13,5 @@
 - [Experiment 4: Docker Essentials](devops-lab/EXP4/experiment4.md)
 - [Experiment 5: Data Persistence, Volumes, Environment Variables, Networking, Logs & Monitoring](devops-lab/EXP5/experiment5.md)
 - [Experiment 6: Docker Run vs Docker Compose: Multi-Container Application Orchestration](devops-lab/EXP6/experiment6.md)
+- [Experiment 7: CI/CD using Jenkins, GitHub and Docker Hub](devops-lab/EXP7/EXP7.md)
+- [Experiment 8: Ansible](devops-lab/EXP8/EXP8.md)
