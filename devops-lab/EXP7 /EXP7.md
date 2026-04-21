@@ -2,8 +2,8 @@
 
 ## CI/CD using Jenkins, GitHub and Docker Hub
 
-**Name:** Rishiraj Singh 
-**SAP ID:** 500123612
+**Name:** Rishiraj Singh
+**SAP ID:** 500123612 
 **Batch:** B3 (CCVT)
 
 ---
