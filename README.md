@@ -38,7 +38,7 @@
 
 ---
 
-### 🔹 [Experiment 7:CI/CD using Jenkins, GitHub and Docker Hub](devops-lab/EXP7/experiment7.md)
+### 🔹[Experiment 7: CI/CD using Jenkins, GitHub and Docker Hub](devops-lab/EXP7/experiment7.md)
 👉 Build a complete CI/CD pipeline integrating GitHub, Jenkins, and Docker Hub to automate build and deployment processes.
 
 ---
