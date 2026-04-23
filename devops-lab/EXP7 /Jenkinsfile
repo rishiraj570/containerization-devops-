@@ -1,12 +1,35 @@
-from flask import Flask
+pipeline {
+    agent any
 
-app = Flask(__name__)
+    environment {
+        IMAGE_NAME = "your-dockerhub-username/myapp"
+    }
 
+    stages {
+        stage('Clone') {
+            steps {
+                git 'https://github.com/your-username/my-app.git'
+            }
+        }
 
-@app.route("/")
-def home():
-    return "Hello from CI/CD Pipeline!"
-    # return "Hello from CI/CD Pipeline!, my sapid is 123456"
+        stage('Build') {
+            steps {
+                sh 'docker build -t $IMAGE_NAME:latest .'
+            }
+        }
 
+        stage('Login') {
+            steps {
+                withCredentials([string(credentialsId: 'dockerhub-token', variable: 'DOCKER_TOKEN')]) {
+                    sh 'echo $DOCKER_TOKEN | docker login -u your-dockerhub-username --password-stdin'
+                }
+            }
+        }
 
-app.run(host="0.0.0.0", port=80)
+        stage('Push') {
+            steps {
+                sh 'docker push $IMAGE_NAME:latest'
+            }
+        }
+    }
+}
