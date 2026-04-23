@@ -229,8 +229,8 @@ Run the compose file to start Jenkins:
 docker compose up -d
 ```
 
-![Docker Compose File](images/docker-compose-file.png)
-![Compose Up](images/compose-up.png)
+![Docker Compose File](images/a1.png)
+![Compose Up](images/a2.png)
 
 This command creates and starts the Jenkins container in detached mode.
 
@@ -248,7 +248,7 @@ Retrieve the initial administrator password from inside the container:
 docker exec -it jenkins cat /var/jenkins_home/secrets/initialAdminPassword
 ```
 
-![Unlock Jenkins](images/unlock-jenkins.png)
+![Unlock Jenkins](images/a4.png)
 
 This password is required for the first-time setup wizard.
 
@@ -258,7 +258,7 @@ This password is required for the first-time setup wizard.
 - Create an admin user
 - Complete the Jenkins setup wizard
 
-![Jenkins Login](images/jenkins-login.png)
+![Jenkins Login](images/a6.png)
 
 The login screen appears after Jenkins is started and unlocked successfully.
 
