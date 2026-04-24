@@ -43,7 +43,7 @@
 
 ---
 
-### 🔹 [Experiment 8: Ansible](devops-lab/EXP8/EXP8.md)
+### 🔹 [Experiment 9: Ansible](devops-lab/EXP8/EXP8.md)
 👉 Learn configuration management and automation using Ansible for efficient infrastructure provisioning.
 
 ---
