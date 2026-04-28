@@ -114,7 +114,7 @@ spec:
         - containerPort: 80       # Port inside the container
 ```
 
-![WordPress Deployment YAML](images/wordpress-deploy-yaml.png)
+![WordPress Deployment YAML](images/a1.png)
 
 ### 4.2 Apply the Deployment
 
@@ -122,7 +122,7 @@ spec:
 kubectl apply -f wordpress-deployment.yaml
 ```
 
-![Apply Deployment](images/kubectl-apply.png)
+![Apply Deployment](images/a2.png)
 
 Kubernetes creates 2 pods running WordPress automatically.
 
@@ -154,7 +154,7 @@ spec:
       nodePort: 30007       # External port (range: 30000–32767)
 ```
 
-![WordPress Service YAML](images/wordpress-service-yaml.png)
+![WordPress Service YAML](images/a3.png)
 
 ### 5.2 Apply the Service
 
@@ -162,7 +162,7 @@ spec:
 kubectl apply -f wordpress-service.yaml
 ```
 
-![Apply Service](images/kubectl-apply-wordpress-service.png)
+![Apply Service](images/a4.png)
 
 The Service is now exposed on port 30007 of any node in the cluster.
 
@@ -188,7 +188,7 @@ wordpress-xxxxx-yyyyy         1/1     Running   0          2m
 wordpress-xxxxx-zzzzz         1/1     Running   0          2m
 ```
 
-![Get Pods](images/kubectl-get-pods.png)
+![Get Pods](images/a5.png)
 
 ### 6.2 Check the Service
 
@@ -204,7 +204,7 @@ wordpress-service   NodePort   10.43.x.x      <none>        80:30007/TCP   1m
 kubernetes          ClusterIP  10.43.0.1      <none>        443/TCP        10m
 ```
 
-![Get Services](images/kubectl-get-svc.png)
+![Get Services](images/a6.png)
 
 ### 6.3 Access Your Application
 
@@ -231,7 +231,7 @@ Increase the number of pods from 2 to 4:
 kubectl scale deployment wordpress --replicas=4
 ```
 
-![Scale Deployment](images/kubectl-scale-deploy.png)
+![Scale Deployment](images/a7.png)
 
 ### 7.1 Verify the Scaling
 
@@ -241,7 +241,7 @@ kubectl get pods
 
 You should now see 4 running WordPress pods.
 
-![Verify Scaling](images/kubectl-get-pods1.png)
+![Verify Scaling](images/a8.png)
 
 #### Why scale?
 
@@ -269,7 +269,7 @@ kubectl get pods
 kubectl delete pod <pod-name>
 ```
 
-![Delete Pod](images/kubectl-delete-pod.png)
+![Delete Pod](images/a9.png)
 
 ### 8.2 Observe Auto-Replacement
 
@@ -279,7 +279,7 @@ kubectl get pods
 
 Even after deletion, you still see 4 pods running.
 
-![Pods Auto-Replaced](images/kubectl-get-pods2.png)
+![Pods Auto-Replaced](images/a10.png)
 
 #### Why this step matters
 
