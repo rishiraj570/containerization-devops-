@@ -2,8 +2,8 @@
 
 ## SonarQube - Static Code Analysis
 
-**Name:** Pulkit Jain  
-**SAP ID:** 500121477  
+**Name:** Rishiraj Singh
+**SAP ID:** 500123612
 **Batch:** B3 (CCVT)
 
 ---
