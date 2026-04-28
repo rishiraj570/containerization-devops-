@@ -46,6 +46,16 @@
 ### 🔹 [Experiment 9: Ansible](devops-lab/EXP8/EXP8.md)
 👉 Learn configuration management and automation using Ansible for efficient infrastructure provisioning.
 
+### 🔹 [Experiment 10: SonarQube - Static Code Analysis](devops-lab/EXP10/EXP10.md)
+
+
+### 🔹 [Experiment 11: Orchestration using Docker Compose and Docker Swarm](devops-lab/EXP11/EXP11.md)
+
+
+### 🔹 [Experiment 12: Container Orchestration using Kubernetes](devops-lab/EXP12/EXP12.md)
+
+
+
 ---
 
 ## ⭐ Highlights
