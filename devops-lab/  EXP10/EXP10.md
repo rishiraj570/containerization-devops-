@@ -160,8 +160,8 @@ docker-compose up -d
 docker-compose logs -f sonarqube
 ```
 
-![Docker Compose File](images/docker-compose-file.png)
-![Compose Up](images/compose-up-d.png)
+![Docker Compose File](images/a1.png)
+![Compose Up](images/a2.png)
 
 After the server starts, open:
 
@@ -175,7 +175,7 @@ Default login:
 admin / admin
 ```
 
-![SonarQube Login](images/sonar-cube-login.png)
+![SonarQube Login](images/a3.png)
 
 ### 3.3 Create a Sample Java App with Code Issues
 
@@ -230,7 +230,7 @@ public class Calculator {
 }
 ```
 
-![Calculator Java File](images/calulator.java-file.png)
+![Calculator Java File](images/a4.png)
 
 The Maven project is configured with SonarQube properties and the Maven scanner plugin.
 
@@ -244,7 +244,7 @@ The Maven project is configured with SonarQube properties and the Maven scanner 
 </properties>
 ```
 
-![pom.xml File](images/pom.xml-file.png)
+![pom.xml File](images/a5.png)
 
 ### 3.4 Generate a Token
 
@@ -260,7 +260,7 @@ Steps:
 6. Click `Generate`
 7. Copy the token immediately because it is shown only once
 
-![Generate Token](images/generate-token.png)
+![Generate Token](images/a6.png)
 
 ### 3.5 Run the Scanner
 
@@ -284,7 +284,7 @@ docker run --rm \
   -Dsonar.projectKey=sample-java-app
 ```
 
-![Run Scanner](images/docker-run.png)
+![Run Scanner](images/a7.png)
 
 ### 3.6 View Results in the Dashboard
 
@@ -296,7 +296,7 @@ http://localhost:9000/dashboard?id=sample-java-app
 
 You should see bugs, vulnerabilities, code smells, coverage, duplication, and technical debt metrics in the dashboard.
 
-![SonarQube Dashboard](images/sonar-cube-dashbboard.png)
+![SonarQube Dashboard](images/a8.png)
 
 ### 3.7 Integrate with Jenkins
 
