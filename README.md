@@ -1,74 +1,36 @@
-# 🚀 Containerization-DevOps
+# 🚀 Containerization & DevOps Lab
 
-**👤 Name:** Rishiraj Singh  
-**🆔 SAP ID:** 500123612  
-**🎓 Batch:** B3 (CCVT)
+**👤 Rishiraj Singh | 🆔 500123612 | 🎓 B3 (CCVT)**
 
 ---
 
 ## 📚 Experiments
 
-### 🔹 [Experiment 1: Virtual Machines vs Containers](devops-lab/EXP1/experiment1.md)
-👉 Understand the fundamental differences between virtual machines and containers, including performance, resource usage, and architecture.
+- 🔹 **EXP1:** Virtual Machines vs Containers  
+- 🔹 **EXP2:** Docker Setup & Running Containers  
+- 🔹 **EXP3:** NGINX with Different Base Images  
+- 🔹 **EXP4:** Docker Essentials  
+- 🔹 **EXP5:** Volumes, Networking & Monitoring  
+- 🔹 **EXP6:** Docker Compose (Multi-Container Apps)  
+- 🔹 **EXP7:** CI/CD with Jenkins, GitHub & Docker Hub  
+- 🔹 **EXP8:** Ansible Automation  
+- 🔹 **EXP10:** SonarQube (Code Analysis)  
+- 🔹 **EXP11:** Docker Swarm Orchestration  
+- 🔹 **EXP12:** Kubernetes Orchestration  
 
 ---
 
-### 🔹 [Experiment 2: Docker Installation, Configuration, and Running Images](devops-lab/EXP2/experiment2.md)
-👉 Learn how to install Docker, configure it properly, and run basic containerized applications using Docker images.
+## ⭐ Key Skills
+
+- 📦 Docker & Containerization  
+- 🔄 CI/CD Pipelines  
+- ⚙️ Automation (Jenkins, Ansible)  
+- 🌐 Orchestration (Swarm & Kubernetes)  
 
 ---
 
-### 🔹 [Experiment 3: Deploying NGINX Using Different Base Images and Comparing Image Layers](devops-lab/EXP3/EXP3.md)
-👉 Explore how different base images affect container size and performance by deploying NGINX and analyzing image layers.
+## 💡 Summary
 
----
-
-### 🔹 [Experiment 4: Docker Essentials](devops-lab/EXP4/experiment4.md)
-👉 Cover core Docker concepts like images, containers, commands, and workflows required for container-based development.
-
----
-
-### 🔹 [Experiment 5: Data Persistence, Volumes, Environment Variables, Networking, Logs & Monitoring](devops-lab/EXP5/experiment5.md)
-👉 Learn advanced Docker features including persistent storage, environment configuration, networking, and monitoring containers.
-
----
-
-### 🔹 [Experiment 6: Docker Run vs Docker Compose: Multi-Container Application Orchestration](devops-lab/EXP6/experiment6.md)
-👉 Understand how to manage multi-container applications using Docker Compose and compare it with manual Docker run commands.
-
----
-
-### 🔹[Experiment 7: CI/CD using Jenkins, GitHub and Docker Hub](devops-lab/EXP7/experiment7.md)
-👉 Build a complete CI/CD pipeline integrating GitHub, Jenkins, and Docker Hub to automate build and deployment processes.
-
----
-
-### 🔹 [Experiment 9: Ansible](devops-lab/EXP8/EXP8.md)
-👉 Learn configuration management and automation using Ansible for efficient infrastructure provisioning.
-
-### 🔹 [Experiment 10: SonarQube - Static Code Analysis](devops-lab/EXP10/EXP10.md)
-
-
-### 🔹 [Experiment 11: Orchestration using Docker Compose and Docker Swarm](devops-lab/EXP11/EXP11.md)
-
-
-### 🔹 [Experiment 12: Container Orchestration using Kubernetes](devops-lab/EXP12/EXP12.md)
-
-
-
----
-
-## ⭐ Highlights
-
-- 📦 Hands-on Docker & containerization  
-- 🔄 CI/CD pipeline implementation  
-- ⚙️ Automation using Jenkins & Ansible  
-- 🌐 Real-world DevOps practices  
-
----
-
-## 💡 Conclusion
-
-This repository demonstrates practical implementation of DevOps concepts, focusing on containerization, automation, and deployment workflows.
+Hands-on DevOps lab covering **Docker, CI/CD, automation, and orchestration** with real-world implementations.
 
 ---
